@@ -44,7 +44,7 @@ public class EditServlet extends HttpServlet {
 
 		//idをセッションスコープにセット
 		if(t != null) {
-			request.setAttribute("task_id", t.getId());
+			request.getSession().setAttribute("task_id", t.getId());
 		}
 
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tasks/edit.jsp");
